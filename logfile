@@ -1,0 +1,11 @@
+2024-07-23 12:05:51.463 +07 [50700] LOG:  starting PostgreSQL 14.11 (Homebrew) on x86_64-apple-darwin22.6.0, compiled by Apple clang version 15.0.0 (clang-1500.1.0.2.5), 64-bit
+2024-07-23 12:05:51.464 +07 [50700] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-07-23 12:05:51.495 +07 [50701] LOG:  database system was shut down at 2024-07-23 12:03:31 +07
+2024-07-23 12:05:51.507 +07 [50700] LOG:  database system is ready to accept connections
+2024-07-23 12:06:27.264 +07 [50731] FATAL:  role "postgres" does not exist
+2024-07-23 12:07:11.058 +07 [50800] FATAL:  lock file "postmaster.pid" already exists
+2024-07-23 12:07:11.058 +07 [50800] HINT:  Is another postmaster (PID 50700) running in data directory "/usr/local/var/postgresql@14"?
+2024-07-23 12:09:14.270 +07 [50700] LOG:  received smart shutdown request
+2024-07-23 12:09:14.275 +07 [50700] LOG:  background worker "logical replication launcher" (PID 50707) exited with exit code 1
+2024-07-23 12:09:14.275 +07 [50702] LOG:  shutting down
+2024-07-23 12:09:14.287 +07 [50700] LOG:  database system is shut down
