@@ -55,7 +55,10 @@ ROOT_URLCONF = 'Home_button.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # путь к директории шаблонов вашего проекта
+            BASE_DIR / 'Accounting_button' / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +70,19 @@ TEMPLATES = [
         },
     },
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 WSGI_APPLICATION = 'Home_button.wsgi.application'
 
