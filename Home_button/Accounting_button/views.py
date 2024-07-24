@@ -41,3 +41,6 @@ def organizer_dashboard(request):
 # Представление для дашборда исполнителя
 def executor_dashboard(request):
     return render(request, 'Accounting_button/dashboards/executor_dashboard.html')
+
+
+

@@ -30,3 +30,16 @@ class CustomUserAdmin(BaseUserAdmin):
     filter_horizontal = ('groups', 'user_permissions')
 
 admin.site.register(CustomUser, CustomUserAdmin)
+
+
+
+from django.contrib import admin
+from .models import ExecutorPosition
+
+# Регистрация модели ExecutorPosition в админке
+@admin.register(ExecutorPosition)
+class ExecutorPositionAdmin(admin.ModelAdmin):
+    # Поля для отображения в списке записей модели в админке
+    list_display = ('position', 'comment')
+    # Поля, по которым можно искать записи в админке
+    search_fields = ('position',)

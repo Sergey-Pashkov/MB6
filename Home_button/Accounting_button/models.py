@@ -49,3 +49,24 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email  # Возвращение email в качестве строкового представления пользователя
+
+
+from django.db import models
+
+# Модель для хранения информации о должностях исполнителей
+class ExecutorPosition(models.Model):
+    # Поле для названия должности
+    position = models.CharField(max_length=255, verbose_name="Должность")
+    # Поле для комментариев к должности
+    comment = models.TextField(verbose_name="Комментарий", blank=True, null=True)
+
+    # Метод для представления объекта модели в виде строки
+    def __str__(self):
+        return self.position
+
+    # Мета-информация о модели
+    class Meta:
+        # Человекочитаемое название модели в единственном числе
+        verbose_name = "Должность исполнителя"
+        # Человекочитаемое название модели во множественном числе
+        verbose_name_plural = "Должности исполнителей"
