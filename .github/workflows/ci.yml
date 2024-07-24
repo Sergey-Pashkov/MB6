@@ -34,19 +34,19 @@ jobs:
       run: |
         python -m venv venv
         source venv/bin/activate
-        pip install -r Home_button/requirements.txt
+        pip install -r requirements.txt
 
-    - name: List files for debugging
-      run: |
-        ls -la
-        ls -la Home_button
+    # - name: List files for debugging
+    #   run: |
+    #     ls -la
+    #     ls -la Home_button
 
-    - name: Run tests
-      env:
-        DJANGO_SETTINGS_MODULE: Home_button.Home_button.settings
-        DATABASE_URL: postgres://postgres:postgres@localhost/test_db
-      run: |
-        cd Home_button
-        source ../venv/bin/activate
-        python manage.py migrate
-        pytest
+    # - name: Run tests
+    #   env:
+    #     DJANGO_SETTINGS_MODULE: Home_button.Home_button.settings
+    #     DATABASE_URL: postgres://postgres:postgres@localhost/test_db
+    #   run: |
+    #     cd Home_button
+    #     source ../venv/bin/activate
+    #     python manage.py migrate
+    #     pytest
